@@ -1,0 +1,8 @@
+total 24
+drwxr-xr-x 4 bibin bibin 4096 Jun 12 11:59 ./
+drwxr-xr-x 3 bibin bibin 4096 May 29 12:27 ../
+-rw-r--r-- 1 bibin bibin    0 Jun 12 11:59 checkfile.txt
+drwxr-xr-x 4 bibin bibin 4096 Jun  4 21:50 coding/
+drwxr-xr-x 8 bibin bibin 4096 Jun 12 11:55 .git/
+-rw-r--r-- 1 bibin bibin 1067 May 29 12:27 LICENSE
+-rw-r--r-- 1 bibin bibin   65 May 29 12:27 README.md
