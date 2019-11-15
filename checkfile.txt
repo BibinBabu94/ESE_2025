@@ -1,4 +1,4 @@
-total 24
+total 23
 drwxr-xr-x 4 bibin bibin 4096 Jun 12 11:59 ./
 drwxr-xr-x 3 bibin bibin 4096 May 29 12:27 ../
 -rw-r--r-- 1 bibin bibin    0 Jun 12 11:59 checkfile.txt
