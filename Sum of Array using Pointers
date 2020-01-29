@@ -1,0 +1,21 @@
+#include<stdlib.h>
+#include<stdio.h>
+
+int fsum(int  *a ,size_t b)
+{
+int i;
+int sum=0;
+for(i=0; i<b; i++)
+{
+sum =  sum + *(a + i);
+}
+return sum;
+}
+
+int main(void)
+{
+int data_arr[]={23,-7,62,58,97,104,33000,-265385};
+size_t L=sizeof(data_arr)/sizeof (int);
+printf("sum of elements in array is %d:\n", fsum(data_arr,L));
+return 0;
+}
