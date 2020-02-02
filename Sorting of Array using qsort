@@ -1,0 +1,30 @@
+
+#include<stdlib.h>
+#include<stdio.h>
+int compar(const void *pa,const void *pb)     //Sorting of Array
+{
+int a=*((int*)pa);
+int b = *((int*)pb);
+int ret=0;
+if(a<b)
+ret=-1;
+else if (a>b)
+ret=1;
+return ret;
+}
+int main(void)
+{
+int i,j;
+int myarr[]={4,8,10,14,1000,34267,8345,5,8,110};
+size_t L=sizeof(myarr)/sizeof(int);
+printf("Before sorting array\n");
+for(i=0;i<L;i++)
+{
+printf("%d \t", myarr[i]);}
+qsort((void*) myarr,L,sizeof(int),compar);   //Inbuilt command qsort for sorting
+printf("\nArray after sorting is\n");
+for(j=0;j<L;j++)
+{
+printf("%d \t",myarr[j]);}
+return 0;
+}
