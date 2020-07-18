@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<unistd.h>                 //header for sleep function or delay
+int main()
+{
+
+#define led "/sys/class/gpio/gpio68/value"
+FILE *fp;
+fp =fopen("/sys/class/gpio/gpio68/direction","w");   //setting GPIO68 as output pin 3.3V output given to LED as VCC
+fputs("out",fp);                                     //setting the pin high
+fclose(fp);
+for(int i=0;i<10;i++)                                //Loop for making LED blink
+{
+fp=fopen(led,"w");                                   //setting the value as high in this case LED will be on
+fputs("1",fp);
+printf("%d ON \n",i);
+fclose(fp);
+sleep(5);                                            //sleep of 5seconds
+fp=fopen(led,"w");
+fputs("0",fp);                                       //setting the value as low in this case LED will be off
+printf("%d OFF \n",i);
+fclose(fp);
+sleep(5);
+}
+fp=fopen("/sys/class/gpio/gpio68/value","w");
+fputs("0",fp);                                       //At the end of excecution setting the gpio68 low.
+fclose(fp);
+return 0;
+}
