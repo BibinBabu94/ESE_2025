@@ -1,6 +1,8 @@
 
 #include<stdlib.h>
 #include<stdio.h>
+
+
 int compar(const void *pa,const void *pb)     //Sorting of Array
 {
 int a=*((int*)pa);
